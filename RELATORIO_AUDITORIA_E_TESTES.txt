@@ -1,0 +1,33 @@
+APP JIRAU V9 — AUDITORIA, CORREÇÕES E TESTES
+Data: 19/07/2026
+
+CORREÇÕES PRINCIPAIS
+1. Banco JSON com gravação atômica (arquivo temporário + substituição segura).
+2. Backup automático jirau_db.json.bak antes de cada sobrescrita.
+3. Recuperação automática pelo backup quando o banco principal estiver corrompido.
+4. Normalização e migração de dados antigos ao iniciar.
+5. Remoção segura de referências órfãs entre materiais, índices e tetos.
+6. Importação substitutiva preserva IDs pelo código do material, evitando quebrar índices existentes.
+7. Bloqueio lógico de códigos duplicados durante normalização/importação.
+8. Tratamento de valores inválidos, negativos, NaN e infinitos.
+9. Lógica de negócio separada em jirau_core.py para permitir testes automatizados.
+10. Recalculo consistente de teto, obra e orçamento após mudanças.
+
+CENÁRIOS AUTOMATIZADOS EXECUTADOS
+- Sintaxe de app.py e jirau_core.py: APROVADA.
+- Fluxo completo material > índice > obra > teto > orçamento: APROVADO.
+- Escala horizontal por área: APROVADA.
+- Escala vertical/travamentos por volume: APROVADA.
+- Cálculo para 45 dias de locação: APROVADO.
+- Peso total, custo por m² e valor total: APROVADOS.
+- Persistência e reabertura do banco: APROVADAS.
+- Criação e uso do backup: APROVADOS.
+- Recuperação de JSON corrompido: APROVADA.
+- Substituição de materiais preservando vínculos por código: APROVADA.
+- Limpeza de duplicidades e referências órfãs: APROVADA.
+
+RESULTADO PYTEST
+5 testes aprovados; 0 falhas.
+
+OBSERVAÇÃO
+O ambiente de auditoria não tinha o pacote Streamlit instalado, portanto a interface visual não foi aberta em navegador neste ambiente. O código da interface teve a sintaxe validada e a lógica central/persistência foi testada diretamente. No Windows, execute iniciar_jirau.bat após instalar requirements.txt.

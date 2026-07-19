@@ -1,0 +1,22 @@
+RELATÓRIO DE ENTREGA — APP JIRAU V11 PROFISSIONAL
+
+1. AUDITORIA DA PLANILHA OFICIAL
+Foram identificadas as abas: (pecas_gestao), JIRAU, TIPO, Proposta Jirau e Cronograma Jirau 2018.
+A proposta oficial trabalha por pavimento e apresenta: jogos, serviço, percentual, pé-direito, teto, área, volume, R$/dia, R$/mês, fator, horizontal e vertical.
+A estrutura do app preserva essa separação e mantém a memória de materiais fora da proposta comercial.
+
+2. PERSISTÊNCIA
+O JSON foi substituído por SQLite com tabelas para materiais, índices, itens de índice, obras, tetos e configurações de serviços.
+A gravação ocorre em transação; chaves estrangeiras estão habilitadas; há WAL, sincronização FULL e backup automático.
+O banco JSON antigo é migrado automaticamente na primeira execução.
+
+3. IMPORTAÇÃO
+Foi validada a leitura da planilha oficial .xls. O importador localizou a aba JIRAU e reconheceu a tabela de materiais.
+
+4. TESTES
+- Sintaxe de app.py e jirau_core.py aprovada.
+- 7 testes automatizados aprovados.
+- Fluxos testados: índices, obras, tetos, orçamento, backup, recuperação, vínculos de materiais, normalização, lógica da proposta e SQLite.
+
+5. OBSERVAÇÃO
+A validação final de valores comerciais deve ser feita com um orçamento real aprovado pela Jirau, porque a planilha oficial possui regras comerciais específicas que podem variar por negociação.

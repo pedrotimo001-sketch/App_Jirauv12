@@ -1,0 +1,39 @@
+APP JIRAU ENTERPRISE V12.1 — CORREÇÃO DOS CÁLCULOS
+Data: 19/07/2026
+
+CORREÇÕES REALIZADAS
+1. Conversão numérica brasileira corrigida.
+   - Aceita 1.234,56, 3,5 e R$ 2.500,75.
+   - Evita valores colados do Excel serem transformados em zero.
+
+2. Fórmula de escala explicitamente separada por grandeza.
+   - Horizontal e reescoramento:
+     índice unitário = quantidade do projeto-base / área-base
+     quantidade do teto = índice unitário x área do teto
+   - Vertical e travamentos:
+     índice unitário = quantidade do projeto-base / volume-base
+     quantidade do teto = índice unitário x volume do teto
+   - volume-base = área-base x pé-direito-base
+   - volume do teto = área do teto x pé-direito do teto
+
+3. Memória de cálculo corrigida.
+   - kg/m² e preço/m² consideram somente grupos horizontais.
+   - kg/m³ e preço/m³ consideram somente grupos verticais.
+   - Células sem relação dimensional não exibem valores falsos.
+
+4. Proposta e materiais.
+   - Percentual e jogos alteram quantidades.
+   - Fator altera preço, sem alterar peso físico.
+   - Valor do período = valor mensal x dias / 30.
+
+5. Auditoria adicionada.
+   - Cada material calculado guarda seus índices unitários por m² ou m³.
+   - Área-base, pé-direito-base e volume-base ficam registrados no teto calculado.
+
+VALIDAÇÃO
+- Sintaxe de app.py, jirau_core.py e premium_theme.py: aprovada.
+- 9 testes automatizados: aprovados.
+- Testes adicionais cobrem números brasileiros e separação horizontal/vertical.
+
+OBSERVAÇÃO IMPORTANTE
+A planilha oficial não estava anexada nesta etapa. Portanto, estas correções eliminam erros matemáticos e de interpretação numérica encontrados no aplicativo. A conferência comercial final com um orçamento real aprovado ainda deve ser feita quando a planilha/orçamento de referência estiver disponível.

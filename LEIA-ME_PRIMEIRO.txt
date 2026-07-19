@@ -1,0 +1,43 @@
+JIRAU ENTERPRISE V12
+=====================
+
+Esta versão recebeu uma nova interface premium nas cores vermelha e branca, com a logo oficial da Jirau Engenharia.
+
+COMO INICIAR
+1. Execute instalar_e_iniciar_jirau.bat; ou
+2. Instale as dependências com: pip install -r requirements.txt
+3. Inicie com: streamlit run app.py
+
+Os dados existentes continuam armazenados no banco data/jirau_v11.sqlite3 para garantir compatibilidade.
+
+APP JIRAU V11 PROFISSIONAL
+
+COMO ABRIR
+1. Extraia o ZIP inteiro para uma pasta.
+2. Clique duas vezes em "iniciar_jirau.bat".
+3. Na primeira abertura, aguarde a instalação das bibliotecas.
+
+PRINCIPAIS MELHORIAS
+- Banco SQLite transacional em data/jirau_v11.sqlite3.
+- Migração automática do banco antigo data/jirau_db.json.
+- Backup automático do SQLite antes de cada gravação.
+- Múltiplos índices e escolha individual por teto/pavimento.
+- Proposta comercial, orçamento técnico e memória de cálculo separados.
+- Exportação Excel e PDF.
+- Importação de planilhas .xlsx e .xls, inclusive o padrão Jirau 2026.
+- Logo oficial incluída no pacote.
+
+ARQUIVOS IMPORTANTES
+- app.py: interface Streamlit.
+- jirau_core.py: cálculos, validações e persistência.
+- data/: banco local criado automaticamente.
+- tests/: testes automatizados.
+
+TESTES
+Execute: python -m pytest -q
+
+
+VERSÃO V12.2 — CÁLCULOS CONFERIDOS COM A PLANILHA OFICIAL
+A lógica foi validada pelas abas TIPO e Cronograma Jirau 2018.
+Reescoramento e travamento de pilares usam volume (m³).
+Travamento de vigas usa área (m²).

@@ -1,0 +1,17 @@
+CORREÇÃO DE BIBLIOTECAS — APP JIRAU V10
+
+Problema corrigido:
+- ModuleNotFoundError: No module named 'reportlab'.
+
+Alterações realizadas:
+- ReportLab mantido no requirements.txt.
+- iniciar_jirau.bat agora verifica e instala automaticamente as dependências.
+- criado instalar_bibliotecas.bat para instalação manual com duplo clique.
+- importação do ReportLab protegida para o aplicativo não travar.
+- caso o ReportLab não esteja instalado, apenas o PDF fica indisponível.
+- Excel e demais funções continuam funcionando.
+
+Validações:
+- sintaxe de app.py: aprovada.
+- sintaxe de jirau_core.py: aprovada.
+- testes automatizados: 6 aprovados.

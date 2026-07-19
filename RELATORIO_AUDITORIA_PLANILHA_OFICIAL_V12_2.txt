@@ -1,0 +1,31 @@
+JIRAU ENTERPRISE V12.2 — AUDITORIA DA PLANILHA OFICIAL
+
+Fonte de verdade analisada:
+Planilha Orçamento - 2026 rev.01 — abas TIPO, Proposta Jirau e Cronograma Jirau 2018.
+
+REGRAS CONFIRMADAS
+- Escoramento de vigas horizontal: proporcional à área (m²).
+- Escoramento de vigas vertical: proporcional ao volume (m³).
+- Escoramento de lajes horizontal: proporcional à área (m²).
+- Escoramento de lajes vertical: proporcional ao volume (m³).
+- Reescoramento de vigas e lajes: proporcional ao volume (m³).
+- Travamento de pilares: proporcional ao volume (m³).
+- Travamento de vigas: proporcional à área (m²).
+- Locação diária = locação mensal / 30.
+- Valor do período = locação diária x número de dias.
+- Quantidade total do material = soma das sete categorias.
+- Peso total = quantidade x peso unitário.
+- Locação mensal = quantidade x valor unitário de locação.
+
+ERROS CORRIGIDOS
+- Reescoramento estava classificado por área; corrigido para volume.
+- Travamento de vigas estava classificado por volume; corrigido para área.
+- Testes de regressão adicionados usando os totais da aba TIPO e os resultados do Cronograma.
+
+VALIDAÇÃO DE REFERÊNCIA
+Para 2º PAVIMENTO: área 285,29 m²; pé-direito 3,33 m; volume 950,0157 m³.
+- Escoramento: R$ 466,455261/dia.
+- Reescoramento: R$ 101,041130/dia.
+- Travamento de pilares: R$ 104,483529/dia.
+- Travamento de vigas: R$ 74,494394/dia.
+Resultados reproduzidos pelo motor corrigido.

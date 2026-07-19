@@ -1,0 +1,24 @@
+APP JIRAU - V10 IDENTIDADE E PROPOSTA
+
+ALTERACOES IMPLEMENTADAS
+1. Separacao da tela final em tres areas:
+   - Proposta Comercial para entrega ao cliente;
+   - Orcamento Tecnico no padrao da planilha Jirau;
+   - Memoria de Calculo para conferencia interna.
+2. Proposta comercial organizada por pavimento, com area, pe-direito, volume, prazo, servicos, subtotal e total geral.
+3. Exportacao profissional para Excel, com tres abas:
+   - Proposta Comercial;
+   - Orcamento Tecnico;
+   - Memoria de Calculo.
+4. Exportacao da proposta comercial para PDF em formato paisagem A4.
+5. Identidade visual Jirau aplicada no cabecalho, tabelas, subtotais e total geral.
+6. Informacoes tecnicas, indices e materiais retirados do documento comercial e mantidos nas abas internas.
+7. Correcao do import json ausente na area de administracao.
+8. Inclusao das dependencias necessarias no requirements.txt.
+
+TESTES REALIZADOS
+- Sintaxe Python: aprovada para app.py e jirau_core.py.
+- Testes automatizados do nucleo: 6 aprovados.
+- Geracao de Excel: aprovada, arquivo aberto com 3 abas.
+- Geracao de PDF: aprovada e renderizada sem cortes ou sobreposicoes graves.
+- Integridade do pacote ZIP: verificada.

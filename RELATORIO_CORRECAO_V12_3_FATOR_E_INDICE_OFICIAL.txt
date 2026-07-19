@@ -1,0 +1,25 @@
+JIRAU ENTERPRISE V12.3 — CORREÇÃO DEFINITIVA DO MOTOR DE PROPOSTA
+
+CAUSAS IDENTIFICADAS
+1. O campo FATOR da planilha oficial havia sido tratado incorretamente como multiplicador comercial.
+2. Índices criados com área-base e pé-direito-base iguais a 1,00 escalavam novamente quantidades brutas.
+3. A interface continha uma legenda invertida para reescoramento e travamento de vigas.
+
+CORREÇÕES
+- FATOR neutralizado e removido da configuração comercial editável.
+- Percentual e quantidade de jogos permanecem como os únicos multiplicadores de quantidade.
+- Índice TIPO OFICIAL JIRAU 2026 incorporado ao aplicativo.
+- Base oficial: área 403,23 m², pé-direito 3,30 m, volume 1.330,659 m³.
+- 46 materiais com quantidades não nulas importados diretamente da aba TIPO.
+- Auditoria avisa e bloqueia conceitualmente índices com quantidades brutas e base 1,00.
+- Legendas de escala corrigidas: área para Vigas H, Lajes H e Travamento de Vigas; volume para Vigas V, Lajes V, Reescoramento e Travamento de Pilares.
+
+VALORES DE CONFERÊNCIA — 1º PAVIMENTO
+Escoramento: R$ 19.659,77/mês
+Reescoramento: R$ 4.245,76/mês
+Travamento de pilar: R$ 4.390,41/mês
+Travamento de viga: R$ 3.158,72/mês
+Subtotal: R$ 31.454,66/mês
+
+VALIDAÇÃO
+11 testes automatizados aprovados.

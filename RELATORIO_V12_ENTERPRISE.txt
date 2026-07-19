@@ -1,0 +1,25 @@
+JIRAU ENTERPRISE V12 — RELATÓRIO DE ALTERAÇÕES
+
+ALTERAÇÕES IMPLEMENTADAS
+- Nova identidade visual premium em vermelho e branco.
+- Logo oficial integrada à sidebar, ao cabeçalho e à prévia da proposta comercial.
+- Novo cabeçalho institucional Jirau Enterprise.
+- Sidebar exclusiva com navegação premium e indicadores rápidos.
+- Dashboard inicial redesenhado com hero institucional e cards modernos.
+- Design system centralizado no arquivo premium_theme.py.
+- Estilização de métricas, formulários, inputs, selects, abas, tabelas, alertas e botões.
+- Responsividade básica para telas menores.
+- Rodapé institucional com identificação da versão.
+- Banco SQLite V11 preservado para manter compatibilidade com dados existentes.
+- Toda a lógica de cálculo de jirau_core.py preservada.
+
+VALIDAÇÕES
+- Compilação Python concluída sem erros.
+- 7 testes automatizados aprovados.
+- Inicialização do Streamlit validada em modo headless.
+
+ARQUIVOS PRINCIPAIS
+- app.py
+- premium_theme.py
+- assets/logo_jirau_oficial.svg
+- jirau_core.py

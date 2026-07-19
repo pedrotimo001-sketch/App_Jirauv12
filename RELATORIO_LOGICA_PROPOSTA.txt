@@ -1,0 +1,29 @@
+APP JIRAU V9 — LÓGICA DA PROPOSTA COMERCIAL
+Data: 19/07/2026
+
+IMPLEMENTADO
+- Cada teto/pavimento gera quatro linhas comerciais:
+  1. Escoramento de vigas e lajes
+  2. Reescoramento de vigas e lajes
+  3. Travamento de pilar
+  4. Travamento de viga
+- Colunas no padrão visual/lógico da planilha de referência:
+  quantidade de jogos, descrição, percentual, pé-direito, pavimento,
+  área, volume, unitário por dia, total mensal, fator,
+  horizontal R$/m² e vertical R$/m³.
+- Configuração individual por teto de percentual, fator e quantidade de jogos.
+- Troca de índice, dias e pé-direito com recálculo completo.
+- Total mensal calculado por componentes horizontais e verticais.
+- Total do período calculado por: mensal x dias / 30.
+- Quantitativo detalhado de materiais recalculado conforme percentual e jogos.
+- Compatibilidade automática com bancos antigos, preenchendo configurações padrão.
+
+VALIDAÇÕES EXECUTADAS
+- Sintaxe jirau_core.py: aprovada.
+- Sintaxe app.py: aprovada.
+- Testes automatizados: 6 aprovados, 0 falhas.
+- Teste específico da lógica da proposta: aprovado.
+- Persistência, recuperação de backup, índices e orçamento: aprovados pelos testes.
+
+OBSERVAÇÃO
+O ambiente de auditoria não possui o comando Streamlit instalado, portanto a inicialização gráfica não foi executada aqui. A sintaxe do aplicativo e toda a lógica central foram validadas por compilação e testes automatizados.
